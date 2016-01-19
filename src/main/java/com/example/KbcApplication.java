@@ -35,7 +35,7 @@ public class KbcApplication {
 		SpringApplication.run(KbcApplication.class, args);
         }
 	
-	@RequestMapping("/reservations")
+	@RequestMapping("/hello")
         String home(Model model) {
 	     model.addAttribute("reservations", this.reservationRepository.findAll());
              return "reservations";
