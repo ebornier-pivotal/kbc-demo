@@ -35,7 +35,7 @@ public class KbcApplication {
 		SpringApplication.run(KbcApplication.class, args);
         }
 	
-	@RequestMapping("/reservations")
+	@RequestMapping("/hello")
         String home(Model model) {
 	     model.addAttribute("reservations", this.reservationRepository.findAll());
              return "reservations";
@@ -44,7 +44,7 @@ public class KbcApplication {
 	@Bean
         CommandLineRunner init(ReservationRepository rr) {
           return args -> {
-            Arrays.asList("Erwan,Josh,Amos,Paolo,Danny,Chris,Floyd".split(","))
+            Arrays.asList("Pierre2,Josh,Amos,Paolo,Danny,Chris,Floyd".split(","))
                     .forEach(n -> rr.save(new Reservation(n)));
 	};
      }
