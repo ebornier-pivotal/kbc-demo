@@ -1,0 +1,4 @@
+---
+applications:
+- name: kbc-demo
+  path: target/kbc-0.0.1-SNAPSHOT.jar
