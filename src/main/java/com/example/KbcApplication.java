@@ -44,7 +44,7 @@ public class KbcApplication {
 	@Bean
         CommandLineRunner init(ReservationRepository rr) {
           return args -> {
-            Arrays.asList("Pierre3,Josh,Amos,Paolo,Danny,Chris,Floyd".split(","))
+            Arrays.asList("Pierre4,Josh,Amos,Paolo,Danny,Chris,Floyd".split(","))
                     .forEach(n -> rr.save(new Reservation(n)));
 	};
      }
